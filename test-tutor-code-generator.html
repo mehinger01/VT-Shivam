@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VT-Shivam Test Tutor Code Generator</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 0.95em;
+        }
+        .info-box {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 16px;
+            margin-bottom: 24px;
+            border-radius: 6px;
+        }
+        .info-box p {
+            color: #333;
+            font-size: 0.9em;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+        .info-box p:last-child {
+            margin-bottom: 0;
+        }
+        .test-data {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+        }
+        .test-data h3 {
+            color: #333;
+            font-size: 1.1em;
+            margin-bottom: 12px;
+        }
+        .test-data ul {
+            list-style: none;
+            color: #666;
+            font-size: 0.9em;
+        }
+        .test-data li {
+            padding: 6px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .test-data li:last-child {
+            border-bottom: none;
+        }
+        .test-data li strong {
+            color: #333;
+        }
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            width: 100%;
+        }
+        button:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        .code-section {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
+        }
+        .code-label {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        .code-box {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 16px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 0.85em;
+            word-break: break-all;
+            color: #333;
+            line-height: 1.6;
+            max-height: 200px;
+            overflow-y: auto;
+            margin-bottom: 12px;
+        }
+        .copy-button {
+            background: #10b981;
+            margin-bottom: 12px;
+        }
+        .copy-button:hover {
+            background: #059669;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+        }
+        .status {
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 12px;
+        }
+        .status.success {
+            background: #d1fae5;
+            color: #065f46;
+            border: 1px solid #6ee7b7;
+        }
+        .status.error {
+            background: #fee2e2;
+            color: #7f1d1d;
+            border: 1px solid #fca5a5;
+        }
+        .instructions {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 16px;
+            border-radius: 6px;
+            margin-top: 24px;
+        }
+        .instructions h4 {
+            color: #92400e;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+        .instructions ol {
+            color: #92400e;
+            font-size: 0.9em;
+            line-height: 1.7;
+            margin-left: 20px;
+        }
+        .instructions li {
+            margin-bottom: 6px;
+        }
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 VT-Shivam Test Tutor Code Generator</h1>
+        <p class="subtitle">Generate a realistic tutor code to test the import functionality</p>
+
+        <div class="info-box">
+            <p><strong>Purpose:</strong> This tool generates a sample tutor code with realistic assessment data that you can use to test the "Load Tutor Code" feature in VT-Shivam.</p>
+            <p><strong>What it includes:</strong> Student profile, completed assessment with scores by domain, mastery levels, and session history.</p>
+        </div>
+
+        <div class="test-data">
+            <h3>📋 Sample Assessment Data</h3>
+            <ul>
+                <li><strong>Student:</strong> Shivam (test student)</li>
+                <li><strong>Questions:</strong> 24 total, 18 correct (75%)</li>
+                <li><strong>Domains:</strong>
+                    <ul style="margin-top: 6px; margin-left: 20px; list-style: disc;">
+                        <li>Integer Operations: 2/3 (67%) - Priority</li>
+                        <li>Order of Operations: 2/2 (100%) - Proficient</li>
+                        <li>Algebra Vocabulary: 2/2 (100%) - Proficient</li>
+                        <li>Combining Like Terms: 3/4 (75%) - Developing</li>
+                        <li>Signed Terms: 2/2 (100%) - Proficient</li>
+                        <li>Distributive Property: 1/2 (50%) - Priority</li>
+                        <li>One-Step Equations: 2/5 (40%) - Priority</li>
+                        <li>Two-Step Equations: 1/2 (50%) - Priority</li>
+                        <li>Equation Meaning: 1/2 (50%) - Priority</li>
+                    </ul>
+                </li>
+                <li><strong>Mastery:</strong> Calculated from domain scores</li>
+                <li><strong>Result:</strong> "Workable foundation with several skills ready for targeted strengthening"</li>
+            </ul>
+        </div>
+
+        <button onclick="generateTutorCode()">Generate Test Tutor Code</button>
+
+        <div id="codeSection" class="code-section" style="display: none;">
+            <div class="code-label">Your Test Tutor Code:</div>
+            <div id="codeBox" class="code-box"></div>
+            <button class="copy-button" onclick="copyCode()">📋 Copy Code to Clipboard</button>
+            <div id="copyStatus"></div>
+
+            <div class="instructions">
+                <h4>✅ How to Test:</h4>
+                <ol>
+                    <li>Open VT-Shivam in your browser</li>
+                    <li>Navigate to the Results tab</li>
+                    <li>Click the "📥 Load Tutor Code" button</li>
+                    <li>Paste the code above into the dialog</li>
+                    <li>Click "Load Session"</li>
+                    <li>Verify that:
+                        <ul style="margin-top: 6px; margin-left: 20px;">
+                            <li>Results appear with 18/24 (75%)</li>
+                            <li>Domain scores show as expected</li>
+                            <li>Sessions 2-5 adapt based on the assessment</li>
+                            <li>You can export the code again and it matches</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <script src="vt-session-engine.js"></script>
+    <script>
+        function generateTutorCode() {
+            // Initialize fresh engine
+            VTSessionEngine.initialize({ loadFromStorage: false });
+
+            // Set test data
+            VTSessionEngine.setState({
+                student: {
+                    name: 'Shivam',
+                    id: 'test-001',
+                    email: 'test@example.com'
+                },
+                assessment: {
+                    current: {
+                        date: new Date().toLocaleDateString(),
+                        total: 18,
+                        max: 24,
+                        domains: {
+                            'Integer Operations': { correct: 2, total: 3 },
+                            'Order of Operations': { correct: 2, total: 2 },
+                            'Algebra Vocabulary': { correct: 2, total: 2 },
+                            'Combining Like Terms': { correct: 3, total: 4 },
+                            'Signed Terms': { correct: 2, total: 2 },
+                            'Distributive Property': { correct: 1, total: 2 },
+                            'One-Step Equations': { correct: 2, total: 5 },
+                            'Two-Step Equations': { correct: 1, total: 2 },
+                            'Equation Meaning': { correct: 1, total: 2 }
+                        },
+                        detail: [
+                            { id: 1, domain: 'Integer Operations', prompt: 'Test', answer: '-5', response: '-5', correct: true },
+                            { id: 2, domain: 'Integer Operations', prompt: 'Test', answer: '8', response: '8', correct: true },
+                            { id: 3, domain: 'Integer Operations', prompt: 'Test', answer: '-28', response: '-30', correct: false },
+                            { id: 4, domain: 'Order of Operations', prompt: 'Test', answer: '14', response: '14', correct: true },
+                            { id: 5, domain: 'Order of Operations', prompt: 'Test', answer: '12', response: '12', correct: true },
+                            { id: 6, domain: 'Algebra Vocabulary', prompt: 'Test', answer: '7', response: '7', correct: true },
+                            { id: 7, domain: 'Algebra Vocabulary', prompt: 'Test', answer: '9', response: '9', correct: true },
+                            { id: 8, domain: 'Combining Like Terms', prompt: 'Test', answer: '17x+14', response: '17x+14', correct: true },
+                            { id: 9, domain: 'Combining Like Terms', prompt: 'Test', answer: '3y-3', response: '3y-3', correct: true },
+                            { id: 10, domain: 'Combining Like Terms', prompt: 'Test', answer: '-3y+18', response: '-3y+18', correct: true },
+                            { id: 11, domain: 'Combining Like Terms', prompt: 'Test', answer: '-6k+5', response: '-6k+5', correct: false },
+                            { id: 12, domain: 'Signed Terms', prompt: 'Test', answer: '7z', response: '7z', correct: true },
+                            { id: 13, domain: 'Signed Terms', prompt: 'Test', answer: '-2k+6', response: '-2k+6', correct: true },
+                            { id: 14, domain: 'Distributive Property', prompt: 'Test', answer: '3x+12', response: '3x+12', correct: true },
+                            { id: 15, domain: 'Distributive Property', prompt: 'Test', answer: '-6y+10', response: '-6y+10', correct: false },
+                            { id: 16, domain: 'One-Step Equations', prompt: 'Test', answer: '8', response: '8', correct: true },
+                            { id: 17, domain: 'One-Step Equations', prompt: 'Test', answer: '24', response: '20', correct: false },
+                            { id: 18, domain: 'One-Step Equations', prompt: 'Test', answer: '4', response: '5', correct: false },
+                            { id: 19, domain: 'One-Step Equations', prompt: 'Test', answer: '0', response: '0', correct: true },
+                            { id: 20, domain: 'One-Step Equations', prompt: 'Test', answer: '12', response: '10', correct: false },
+                            { id: 21, domain: 'Two-Step Equations', prompt: 'Test', answer: '5', response: '5', correct: true },
+                            { id: 22, domain: 'Two-Step Equations', prompt: 'Test', answer: '5', response: '6', correct: false },
+                            { id: 23, domain: 'Equation Meaning', prompt: 'Test', answer: 'n+8=21', response: 'n+8=21', correct: true },
+                            { id: 24, domain: 'Equation Meaning', prompt: 'Test', answer: 'yes', response: 'no', correct: false }
+                        ]
+                    },
+                    history: []
+                },
+                mastery: {
+                    'integer-operations': 0.67,
+                    'order-of-operations': 1.0,
+                    'algebra-vocabulary': 1.0,
+                    'combining-like-terms': 0.75,
+                    'signed-terms': 1.0,
+                    'distributive-property': 0.5,
+                    'one-step-equations': 0.4,
+                    'two-step-equations': 0.5,
+                    'equation-meaning': 0.5
+                },
+                notes: [
+                    { id: 'N1', content: 'Test assessment generated for integration testing', date: new Date().toISOString() }
+                ]
+            });
+
+            // Generate code
+            const code = VTSessionEngine.copyTutorCode();
+
+            if (code) {
+                // Display code
+                document.getElementById('codeBox').textContent = code;
+                document.getElementById('codeSection').style.display = 'block';
+                document.getElementById('copyStatus').innerHTML = '<div class="status success">✓ Tutor code generated successfully!</div>';
+            } else {
+                document.getElementById('copyStatus').innerHTML = '<div class="status error">✗ Failed to generate tutor code</div>';
+            }
+        }
+
+        function copyCode() {
+            const code = document.getElementById('codeBox').textContent;
+            if (!code) {
+                document.getElementById('copyStatus').innerHTML = '<div class="status error">✗ No code to copy</div>';
+                return;
+            }
+
+            navigator.clipboard.writeText(code).then(() => {
+                document.getElementById('copyStatus').innerHTML = '<div class="status success">✓ Code copied to clipboard!</div>';
+                setTimeout(() => {
+                    document.getElementById('copyStatus').innerHTML = '';
+                }, 3000);
+            }).catch(() => {
+                // Fallback if clipboard fails
+                alert('Copy failed. Please manually select and copy:\n\n' + code);
+            });
+        }
+    </script>
+</body>
+</html>
