@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shivam's Math Path</title>
+<style>
+:root{--navy:#17324d;--blue:#2f6fa3;--sky:#eaf5ff;--gold:#f2b84b;--green:#2f855a;--red:#b44343;--ink:#1f2937;--muted:#64748b;--card:#fff;--bg:#f6f9fc;--line:#dce5ee}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}header{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;padding:28px 18px}.wrap{max-width:1050px;margin:auto}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:800;opacity:.85}h1{margin:.25rem 0 .4rem;font-size:clamp(2rem,5vw,3.4rem)}header p{max-width:780px;margin:0;font-size:1.08rem}.nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.nav button,.btn{border:0;border-radius:999px;padding:11px 18px;font-weight:800;cursor:pointer}.nav button{background:#ffffff20;color:#fff;border:1px solid #ffffff45}.nav button.active{background:#fff;color:var(--navy)}main{padding:24px 16px 60px}.panel{display:none}.panel.active{display:block}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;margin:0 0 18px;box-shadow:0 6px 22px #17324d0d}.hero-grid,.grid-2,.grid-3,.grid-4{display:grid;gap:16px}.hero-grid{grid-template-columns:1.25fr .75fr}.grid-2{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}@media(max-width:760px){.hero-grid,.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}}h2{color:var(--navy);margin-top:0}h3{margin:.2rem 0 .5rem;color:var(--navy)}h4{color:var(--navy);margin:1rem 0 .4rem}.pill{display:inline-block;background:var(--sky);color:var(--blue);border-radius:999px;padding:5px 10px;font-weight:800;font-size:.82rem}.question{padding:18px;border:1px solid var(--line);border-radius:14px;margin:14px 0;background:#fff}.question p{font-weight:750;margin:.1rem 0 .75rem}.question input,.tool input{width:100%;max-width:280px;padding:11px 12px;border:2px solid #cbd5e1;border-radius:10px;font-size:1rem}.question input:focus,.tool input:focus{outline:3px solid #bfe0ff;border-color:var(--blue)}.section-title{margin-top:28px;padding:10px 14px;border-left:5px solid var(--gold);background:#fff8e8;border-radius:8px;font-weight:900;color:var(--navy)}.btn{background:var(--blue);color:#fff}.btn.secondary{background:#e8eef4;color:var(--navy)}.btn.gold{background:var(--gold);color:#3b2b08}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.notice{background:#fff8e8;border-left:5px solid var(--gold);padding:14px;border-radius:10px}.success{background:#eaf8ef;border-left:5px solid var(--green);padding:14px;border-radius:10px}.scorebar{height:12px;background:#e7edf3;border-radius:999px;overflow:hidden}.scorebar span{display:block;height:100%;background:linear-gradient(90deg,var(--gold),var(--green))}.domain{margin-bottom:16px}.domain-head{display:flex;justify-content:space-between;gap:12px;font-weight:800}.lesson{border-left:6px solid var(--blue)}.tag{display:inline-block;margin:3px 5px 3px 0;padding:4px 8px;border-radius:7px;background:#edf3f8;font-size:.82rem;font-weight:700}.hidden{display:none!important}.tutor-only{border:2px dashed #8aa8c4;background:#f3f8fc}.parent-only{border:2px dashed #d7b45b;background:#fffaf0}.small{font-size:.9rem;color:var(--muted)}ul,ol{padding-left:1.35rem}.answer-key table{width:100%;border-collapse:collapse}.answer-key th,.answer-key td{border-bottom:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}.footer-note{text-align:center;color:var(--muted);margin-top:30px}.tutor-controls{background:#f3f8fc;border:2px dashed #8aa8c4;border-radius:12px;padding:16px;margin-bottom:18px}.tutor-controls h3{margin-top:0}.tutor-controls .actions{margin-top:12px}.toast{position:fixed;bottom:20px;left:20px;background:var(--green);color:#fff;padding:14px 18px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.2);z-index:1000;animation:slideIn .3s ease-out}.code-dialog{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;border-radius:12px;padding:28px;box-shadow:0 10px 40px rgba(0,0,0,0.2);z-index:2000;max-width:500px;width:90%}.code-dialog-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:1999}.code-dialog textarea{width:100%;height:100px;padding:12px;border:2px solid #cbd5e1;border-radius:8px;font-family:monospace;font-size:.9rem;resize:vertical}.code-dialog .actions{margin-top:16px}.lesson-banner{background:linear-gradient(135deg,#fff,#f0f7ff);border:1px solid #cfe2f4}.flow{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:14px 0}.flow span{background:#eef4f9;border-radius:9px;padding:7px 10px;font-weight:800}.flow b{color:var(--blue)}.math{font-family:"Cambria Math",Cambria,serif;font-size:1.12em}.work-set{counter-reset:item;display:grid;grid-template-columns:repeat(2,1fr);gap:10px 26px;padding-left:0;list-style:none}.work-set li{counter-increment:item;border-bottom:1px solid #e7edf3;padding:9px 4px 14px;min-height:52px}.work-set li:before{content:counter(item) ". ";font-weight:900;color:var(--blue)}@media(max-width:700px){.work-set{grid-template-columns:1fr}}.teacher-move{font-size:.92rem;color:#40566b;border-left:3px solid #9fb9d0;padding-left:10px;margin-top:8px}.tool{border:1px solid #cddcea;background:#f8fbfe;border-radius:14px;padding:16px;margin:15px 0}.tool h4{margin-top:0}.sort-bank,.sort-zone{display:flex;gap:8px;flex-wrap:wrap;min-height:54px;padding:10px;border:2px dashed #bfd1e1;border-radius:10px;background:#fff}.sort-term{border:0;background:#eaf5ff;color:var(--navy);padding:8px 11px;border-radius:9px;font-weight:850;cursor:pointer}.sort-zone.selected{outline:3px solid #bfe0ff}.visual-equation{font-family:"Cambria Math",Cambria,serif;font-size:1.35rem;font-weight:700;margin:12px 0}.area-grid{display:grid;grid-template-columns:1fr 1fr;border:3px solid var(--navy);border-radius:8px;overflow:hidden;margin-top:12px}.area-grid div{padding:24px 12px;text-align:center;font-weight:900;background:#fff}.area-grid div+div{border-left:2px solid var(--navy)}.box-method-grid{display:grid;grid-template-columns:minmax(64px,.45fr) repeat(2,minmax(90px,1fr));grid-template-rows:minmax(48px,auto) repeat(2,minmax(66px,auto));margin-top:14px;max-width:620px}.box-method-grid>div{display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;font-weight:900;font-family:"Cambria Math",Cambria,serif;font-size:1.08rem}.box-method-grid .corner{background:transparent}.box-method-grid .factor-label{background:#fff8e8;color:var(--navy);border:2px solid var(--gold)}.box-method-grid .top-left{border-radius:10px 0 0 0}.box-method-grid .top-right{border-radius:0 10px 0 0}.box-method-grid .side-top{border-radius:10px 0 0 0}.box-method-grid .side-bottom{border-radius:0 0 0 10px}.box-method-grid .product-cell{background:#fff;border-right:2px solid var(--navy);border-bottom:2px solid var(--navy)}.box-method-grid .product-cell.top{border-top:3px solid var(--navy)}.box-method-grid .product-cell.left{border-left:3px solid var(--navy)}.box-method-grid .product-cell.right{border-right:3px solid var(--navy)}.box-method-grid .product-cell.bottom{border-bottom:3px solid var(--navy)}.box-factor-caption{font-size:.82rem;color:var(--muted);font-weight:800;text-align:center}.method-card{border-left:5px solid var(--blue)}.checkpoint{background:#f4f8fc;border:1px solid #cbddeb;border-radius:12px;padding:14px;margin:15px 0}.branch{border-top:5px solid var(--gold)}.transition{background:#eef7ff;border-left:5px solid var(--blue);padding:16px 18px;border-radius:10px;margin:18px 0}.transition strong{color:var(--navy)}.misconception{border:1px solid #f1caca;border-left:5px solid var(--red);border-radius:12px;padding:15px;background:#fffafa}.misconception .wrong{color:var(--red);font-weight:900}.equation-compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}.equation-compare>div{padding:16px;border-radius:12px;border:1px solid var(--line);background:#fff}.equation-compare strong{color:var(--navy)}@media(max-width:700px){.equation-compare{grid-template-columns:1fr}}details{border-radius:12px;padding:0}details summary{cursor:pointer;font-weight:900;color:var(--navy);padding:4px 0}.standard-form{white-space:nowrap}@keyframes slideIn{from{transform:translateX(-100%);opacity:0}to{transform:translateX(0);opacity:1}}
+@media print{header,.nav,.actions,.tutor-controls,.interactive-only{display:none!important}.panel{display:block!important}.card{box-shadow:none;break-inside:avoid}body{background:#fff}.tool{display:none!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="eyebrow">Virtual Tutoring • Middle School Math</div><h1>Shivam's Math Path</h1><p>Strong algebra is built by seeing structure, writing clean steps, and explaining why each step works.</p><div class="nav"><button class="active" data-tab="session2">Session 2: Active Lesson</button><button data-tab="assessment">Session 1 Assessment</button><button data-tab="results">Assessment Results</button><button data-tab="home">Overview</button></div></div></header>
+<main class="wrap">
+<section id="session2" class="panel active">
+  <div class="card lesson-banner">
+    <span class="pill">Session 2 • Active Lesson</span>
+    <h2>Simplifying Expressions → Ready to Solve</h2>
+    <p><strong>Main idea:</strong> simplifying means rewriting an expression in an equivalent, cleaner form. Today the goal is not to memorize more tricks. It is to see structure, make legal moves, and explain why the rewritten expression still means the same thing.</p>
+    <div class="notice"><strong>How we work:</strong> the screen coaches. The mathematics belongs on paper. For every new idea: explain → demonstrate → work by hand → discuss reasoning → check → increase difficulty.</div>
+  </div>
+
+  <div class="card">
+    <h2>1. Learning Objectives</h2>
+    <p>By the end of this session, Shivam will be able to:</p>
+    <ul>
+      <li>identify like terms and explain why they can or cannot be combined;</li>
+      <li>simplify expressions accurately with positive and negative coefficients;</li>
+      <li>use the distributive property in written form and connect it to an area model and box model;</li>
+      <li>simplify multi-step expressions by distributing, combining like terms, and writing standard form;</li>
+      <li>recognize FOIL as repeated distribution for two binomials, not a separate mathematical rule;</li>
+      <li>distinguish simplifying an expression from solving an equation;</li>
+      <li>show enough mastery to decide whether to extend expression work or begin equation solving.</li>
+    </ul>
+    <div class="flow"><span>See structure</span><b>→</b><span>Distribute</span><b>→</b><span>Combine</span><b>→</b><span>Standard form</span><b>→</b><span>Check equivalence</span></div>
+  </div>
+
+  <div class="card">
+    <h2>2. Warm-up Retrieval</h2>
+    <p><strong>Do all five on paper.</strong> After each, explain the rule you used. The tutor should listen for reasoning, not just final answers.</p>
+    <ol class="work-set">
+      <li><span class="math">18 ÷ 3 + 2(4)</span></li>
+      <li><span class="math">5 + 3² - 2</span></li>
+      <li><span class="math">7x + 4x - 3</span></li>
+      <li><span class="math">4y - (-3y) + 2</span></li>
+      <li>Write <span class="math">8 + 2x + 5x² - x</span> in standard form.</li>
+    </ol>
+    <div class="checkpoint"><strong>Tutor checkpoint:</strong> If all five are secure, do not reteach Session 1. Ask one explanation question: “Why can the <span class="math">2x</span> and <span class="math">-x</span> combine, but not with <span class="math">5x²</span>?” Then move on. If a sign or exponent error appears, note it and watch for the same pattern later.</div>
+  </div>
+
+  <div class="card">
+    <h2>3. Like Terms: What Can Actually Combine?</h2>
+    <div class="grid-2">
+      <div>
+        <h3>Explain</h3>
+        <p>Terms are <strong>like terms</strong> when their variable parts match exactly. The coefficients may be different, but the variables and exponents must match.</p>
+        <p class="math">3x + 8x = 11x</p>
+        <p class="math">4x² - 7x² = -3x²</p>
+        <p>Think of the variable part as the “unit.” You may add 3 x-units to 8 x-units. But an <span class="math">x</span>-unit and an <span class="math">x²</span>-unit are different kinds of quantities.</p>
+      </div>
+      <div>
+        <h3>Demonstrate</h3>
+        <p class="math">6x + 4 - 2x + 9</p>
+        <p>Group by type: <span class="math">(6x - 2x) + (4 + 9)</span></p>
+        <p class="math"><strong>4x + 13</strong></p>
+        <p class="teacher-move"><strong>Discussion prompt:</strong> “What feature tells you two terms belong together?” Require “same variable part, including exponent,” not merely “they both have letters.”</p>
+      </div>
+    </div>
+
+    <div class="tool interactive-only" id="likeTermSorter">
+      <h4>Like Term Sorter</h4>
+      <p class="small">Predict the groups on paper first. Then choose a destination and click each term to sort it.</p>
+      <div class="sort-bank" id="sortBank"></div>
+      <div class="grid-3" style="margin-top:10px">
+        <div><strong>x terms</strong><div class="sort-zone" data-zone="x"></div></div>
+        <div><strong>x² terms</strong><div class="sort-zone" data-zone="x2"></div></div>
+        <div><strong>constants</strong><div class="sort-zone" data-zone="constant"></div></div>
+      </div>
+      <p id="sortFeedback" class="small"></p>
+    </div>
+
+    <h3>Student works by hand</h3>
+    <ol class="work-set">
+      <li><span class="math">5x + 7x + 3</span></li>
+      <li><span class="math">9y - 4y + 8 - 2</span></li>
+      <li><span class="math">3a² + 5a - a² + 2a</span></li>
+      <li><span class="math">-6m + 2 + 9m - 7</span></li>
+    </ol>
+    <div class="checkpoint"><strong>Reasoning checkpoint:</strong> For #3, Shivam should explicitly identify the <span class="math">a²</span> family and the <span class="math">a</span> family before combining. Then ask: “How do you know you are finished?” A complete answer should mention that no like terms remain and the expression can be placed in standard form.</div>
+
+    <div class="transition"><strong>Transition:</strong> “So far, every term we wanted to combine was already visible. But algebra often hides terms inside parentheses. Before we can combine those terms, we need a legal way to bring them out. That is exactly what the distributive property does.”</div>
+  </div>
+
+  <div class="card">
+    <h2>4. Distributive Property Workshop</h2>
+    <p>The distributive property says that a factor outside a group multiplies <strong>every term</strong> inside that group. The models below are not different rules. They are different ways to see the same multiplication.</p>
+
+    <div class="card method-card">
+      <h3>A. Area Model</h3>
+      <p>Think of <span class="math">3(x + 4)</span> as a rectangle with height 3 and total width <span class="math">x + 4</span>. Split the width into <span class="math">x</span> and 4. The whole area equals the sum of the two smaller areas.</p>
+      <p class="math"><strong>3(x + 4) = 3x + 12</strong></p>
+      <div class="tool interactive-only">
+        <h4>Area Model Visualizer</h4>
+        <p class="small">Enter a numerical outside factor and two simple inside terms. Use forms such as 3, x, 4 or -2, 3y, -5.</p>
+        <div class="grid-3"><label>Outside factor<input id="areaFactor" value="3" /></label><label>First term<input id="areaA" value="x" /></label><label>Second term<input id="areaB" value="4" /></label></div>
+        <div class="area-grid"><div id="areaCellA">3x</div><div id="areaCellB">12</div></div>
+        <p id="areaEquation" class="visual-equation">3(x + 4) = 3x + 12</p>
+      </div>
+      <div class="teacher-move"><strong>Tutor move:</strong> Return immediately to paper. Draw an area model for <span class="math">-2(3y - 5)</span>. Ask, “What must happen to both regions when the outside factor is negative?” Expected result: <span class="math">-6y + 10</span>.</div>
+    </div>
+
+    <div class="card method-card">
+      <h3>B. Standard Written Distribution</h3>
+      <p>When the picture is no longer needed, show both multiplications in writing so the outside factor cannot “miss” a term.</p>
+      <p class="math">-4(2x - 3)</p>
+      <p class="math">=(-4)(2x) + (-4)(-3)</p>
+      <p class="math"><strong>= -8x + 12</strong></p>
+      <p class="teacher-move"><strong>Language cue:</strong> “Multiply the outside factor by every term inside. Keep each sign attached to its term.” Ask why the constant becomes positive 12.</p>
+    </div>
+
+    <div class="card method-card">
+      <h3>C. Box Method</h3>
+      <p>The box method organizes repeated distribution. Put one factor across the top and the other down the side. Every interior cell is the product of the term above it and the term beside it.</p>
+      <p class="math">(x + 3)(x + 5)</p>
+      <div class="box-factor-caption">First factor across the top • Second factor down the side</div>
+      <div class="box-method-grid" aria-label="Example box model with original binomial terms outside the product boxes">
+        <div class="corner"></div><div class="factor-label top-left">x</div><div class="factor-label top-right">+3</div>
+        <div class="factor-label side-top">x</div><div class="product-cell top left">x²</div><div class="product-cell top right">3x</div>
+        <div class="factor-label side-bottom">+5</div><div class="product-cell bottom left">5x</div><div class="product-cell bottom right">15</div>
+      </div>
+      <p>The four products are <span class="math">x²</span>, <span class="math">3x</span>, <span class="math">5x</span>, and 15. Only after all products exist do we combine the like middle terms:</p>
+      <p class="math"><strong>x² + 8x + 15</strong></p>
+      <div class="tool interactive-only">
+        <h4>Box Method Builder</h4>
+        <p class="small">Use simple binomials such as x + 2 or x - 4. Trace each product back to its two original terms, then do the combining on paper.</p>
+        <div class="grid-2"><label>Top factor<input id="boxFactor1" value="x + 3" /></label><label>Side factor<input id="boxFactor2" value="x + 5" /></label></div>
+        <div class="box-factor-caption">Top factor → across • Side factor → down</div>
+        <div class="box-method-grid" aria-label="Interactive box method showing original factor terms outside the product cells">
+          <div class="corner"></div><div id="boxTop1" class="factor-label top-left">x</div><div id="boxTop2" class="factor-label top-right">+3</div>
+          <div id="boxSide1" class="factor-label side-top">x</div><div id="box11" class="product-cell top left">x²</div><div id="box12" class="product-cell top right">3x</div>
+          <div id="boxSide2" class="factor-label side-bottom">+5</div><div id="box21" class="product-cell bottom left">5x</div><div id="box22" class="product-cell bottom right">15</div>
+        </div>
+        <p id="boxSummary" class="small">Trace each product to one top term and one side term. Then combine like terms on paper.</p>
+      </div>
+    </div>
+
+    <div class="card method-card">
+      <h3>D. Where FOIL Fits</h3>
+      <p><strong>FOIL is not a new rule.</strong> It is a memory label for the four products created when two binomials are multiplied: First, Outer, Inner, Last.</p>
+      <p class="math">(x + 3)(x + 5)</p>
+      <p class="math">x·x + x·5 + 3·x + 3·5</p>
+      <p class="math">x² + 5x + 3x + 15 = x² + 8x + 15</p>
+      <div class="notice"><strong>Why this matters:</strong> FOIL works only because distribution works. Distribution is the transferable idea. It still works with three terms, more variables, negative terms, and expressions that do not fit the letters F-O-I-L.</div>
+    </div>
+
+    <div class="transition"><strong>Transition:</strong> “Distribution creates the terms. Combining like terms cleans them up. Most multi-step simplification is those two ideas working together in the correct order.”</div>
+  </div>
+
+  <div class="card">
+    <h2>5. Multi-Step Simplification: A Reliable Process</h2>
+    <p>When an expression becomes longer, do not hunt randomly for things to combine. Use a consistent sequence:</p>
+    <div class="flow"><span>1. Read the structure</span><b>→</b><span>2. Distribute</span><b>→</b><span>3. Combine like terms</span><b>→</b><span>4. Standard form</span><b>→</b><span>5. Quick check</span></div>
+    <h3>Teacher model</h3>
+    <p class="math">3(2x - 5) + 2(x + 4)</p>
+    <p><strong>Distribute:</strong> <span class="math">6x - 15 + 2x + 8</span></p>
+    <p><strong>Combine:</strong> <span class="math">(6x + 2x) + (-15 + 8)</span></p>
+    <p><strong>Simplified:</strong> <span class="math">8x - 7</span></p>
+    <p class="teacher-move"><strong>Discussion prompts:</strong> “Why did we distribute before combining?” “Where was the highest-risk sign?” “How can you tell there is nothing left to simplify?”</p>
+
+    <h3>Guided practice</h3>
+    <p>Work on paper. For the early items, say the next move before writing it. As accuracy improves, the tutor should fade prompts.</p>
+    <ol class="work-set">
+      <li><span class="math">8x + 3x</span></li>
+      <li><span class="math">7y + 4 - 2y + 3</span></li>
+      <li><span class="math">12a - 5a - 9</span></li>
+      <li><span class="math">-4m + 7m + 6 - 10</span></li>
+      <li><span class="math">3x² + 5x + 2x² - x</span></li>
+      <li><span class="math">6p - 2p² + 9 + 5p² - p</span></li>
+      <li><span class="math">4(x + 6)</span></li>
+      <li><span class="math">3(2y - 5)</span></li>
+      <li><span class="math">-2(x + 7)</span></li>
+      <li><span class="math">-5(3a - 4)</span></li>
+      <li><span class="math">2(x + 3) + 5x</span></li>
+      <li><span class="math">4(2y - 1) - 3y</span></li>
+      <li><span class="math">-3(x - 4) + 2x</span></li>
+      <li><span class="math">5(2m + 3) - 4(m - 1)</span></li>
+      <li><span class="math">3(2x - 5) + 2(x + 4)</span></li>
+      <li><span class="math">-2(4y - 3) + 5(y + 2)</span></li>
+      <li>Write <span class="math">7 + 2x² - 3x + 5x² + x - 4</span> in standard form.</li>
+      <li><span class="math">2(x + 3) + 3(x - 4) - x</span></li>
+      <li><span class="math">4(2a - 3) - 2(a + 5) + 7</span></li>
+      <li><span class="math">-3(2n - 5) + 4(n - 2) - 6</span></li>
+    </ol>
+    <div class="checkpoint"><strong>Checkpoint after every 4–5 problems:</strong> Ask one of these, not all three: “What did you look for first?” “Where could a sign error happen?” “How do you know the final expression is simplified?” If the reasoning is sound, skip repetitive easy items and advance.</div>
+  </div>
+
+  <div class="card">
+    <h2>6. Misconception Clinic</h2>
+    <p>This section is diagnostic. Do not lecture through every box. Show the incorrect work, ask Shivam to locate the first illegal move, and use only the misconception that matches what you are seeing.</p>
+    <div class="grid-2">
+      <div class="misconception"><h3>Missed distribution</h3><p class="wrong math">3(x + 4) = 3x + 4</p><p><strong>Ask:</strong> “Which term never got multiplied by 3?”</p><p><strong>Repair:</strong> Draw two arrows or two area regions. The factor 3 must reach both <span class="math">x</span> and 4.</p></div>
+      <div class="misconception"><h3>Negative sign error</h3><p class="wrong math">-3(x - 4) = -3x - 12</p><p><strong>Ask:</strong> “What is <span class="math">(-3)(-4)</span>?”</p><p><strong>Repair:</strong> Treat <span class="math">-4</span> as one signed term. Negative times negative gives positive.</p></div>
+      <div class="misconception"><h3>Unlike terms combined</h3><p class="wrong math">2x² + 5x = 7x²</p><p><strong>Ask:</strong> “Do the variable parts match exactly?”</p><p><strong>Repair:</strong> <span class="math">x²</span> and <span class="math">x</span> are different term families, so the expression is already simplified.</p></div>
+      <div class="misconception"><h3>Exponent changed while adding</h3><p class="wrong math">3x + 4x = 7x²</p><p><strong>Ask:</strong> “Are we multiplying x by x, or counting x-terms?”</p><p><strong>Repair:</strong> Adding coefficients does not change the variable part: <span class="math">3x + 4x = 7x</span>.</p></div>
+      <div class="misconception"><h3>Trying to solve an expression</h3><p class="wrong math">4x + 7 → x = ?</p><p><strong>Ask:</strong> “What number is this expression equal to?”</p><p><strong>Repair:</strong> Without an equals sign there is no condition that determines x. We simplify expressions; we solve equations.</p></div>
+      <div class="misconception"><h3>Stopping too early</h3><p class="wrong math">2(x + 3) + 5x = 2x + 6 + 5x</p><p><strong>Ask:</strong> “Are any like terms still visible?”</p><p><strong>Repair:</strong> Continue to <span class="math">7x + 6</span>.</p></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>7. Independent Mastery Check</h2>
+    <p><strong>Paper only. No coaching unless Shivam is genuinely stuck.</strong> Show enough work that another person could audit each step.</p>
+    <ol class="work-set">
+      <li><span class="math">6(2x - 3) - 4(x + 5) + 7</span></li>
+      <li><span class="math">-3(4y - 2) + 2(5y + 7) - 9</span></li>
+      <li>Write <span class="math">5 - 2x + 3x² - 4 + 7x - x²</span> in standard form.</li>
+      <li><span class="math">2(3a - 4) - [a + 2(a - 5)]</span></li>
+      <li><span class="math">4(2m - 3) - 3(m + 1) + 2(1 - m)</span></li>
+    </ol>
+    <div class="notice"><strong>Mastery evidence:</strong> Move to equation solving if at least 4 of 5 are correct, errors are isolated rather than repeated, and Shivam can explain the order of his moves. A quickly self-corrected arithmetic slip is different from a repeated structural error.</div>
+  </div>
+
+  <div class="card branch">
+    <h2>8. Decision Point</h2>
+    <p>Choose one branch from evidence. Do not use the clock as the reason.</p>
+    <div class="grid-2">
+      <div class="card">
+        <span class="pill">Branch A</span>
+        <h3>Precision Repair</h3>
+        <p><strong>Choose this if:</strong> fewer than 4/5 mastery problems are correct, distribution/sign errors repeat, unlike terms are combined, or Shivam cannot explain why a move is legal.</p>
+        <ol class="work-set">
+          <li><span class="math">3(2x + 5) - x</span></li>
+          <li><span class="math">-4(y - 3) + 2y</span></li>
+          <li><span class="math">5(2a - 1) - 3(a + 4)</span></li>
+          <li><span class="math">-2(3m + 5) + 4(m - 1)</span></li>
+          <li><span class="math">2x² + 5x - x² - 8x + 6</span></li>
+          <li><span class="math">3(2p - 4) - 2(p + 7) + 5</span></li>
+        </ol>
+        <p class="teacher-move"><strong>Tutor move:</strong> Identify the first wrong move, model one parallel example, then return control to Shivam. Do not restart the entire lesson.</p>
+      </div>
+      <div class="card">
+        <span class="pill">Branch B</span>
+        <h3>Bridge Into Equation Solving</h3>
+        <p><strong>Choose this if:</strong> at least 4/5 mastery problems are correct and Shivam can describe the simplification process without prompts.</p>
+
+        <div class="equation-compare">
+          <div><strong>Expression</strong><p class="math">2(x + 4) + x</p><p>Goal: rewrite it more simply.</p><p class="math">2x + 8 + x = 3x + 8</p><p>There is no single value of x to find.</p></div>
+          <div><strong>Equation</strong><p class="math">2(x + 4) + x = 17</p><p>Goal: find the value of x that makes both sides equal.</p><p>First simplify the left side, then solve.</p></div>
+        </div>
+
+        <div class="transition"><strong>Teacher transition:</strong> “Everything you just learned still matters. Equations add one new responsibility: once each side is as clear as it needs to be, we use inverse operations while keeping the equation balanced.”</div>
+
+        <h4>Balance idea</h4>
+        <p>An equation says two quantities are equal. Whatever operation we perform to one side must also be performed to the other side, so the equality remains true.</p>
+        <p class="math">3x + 5 = 20</p>
+        <p>Subtract 5 from both sides: <span class="math">3x = 15</span>.</p>
+        <p>Divide both sides by 3: <span class="math">x = 5</span>.</p>
+        <p><strong>Check:</strong> <span class="math">3(5)+5=20</span>, so the solution works.</p>
+
+        <h4>Student works by hand</h4>
+        <ol class="work-set">
+          <li><span class="math">x + 7 = 19</span></li>
+          <li><span class="math">4x = 28</span></li>
+          <li><span class="math">2x + 3 = 17</span></li>
+          <li><span class="math">5y - 6 = 24</span></li>
+          <li><span class="math">3(x + 2) = 18</span></li>
+          <li><span class="math">2(x + 4) + x = 17</span></li>
+          <li><span class="math">4(x - 1) + 2x = 20</span></li>
+          <li><span class="math">3(2y + 1) - y = 18</span></li>
+        </ol>
+        <p class="teacher-move"><strong>Key prompt for #5–8:</strong> “What can you simplify before you start undoing operations?” If Shivam independently simplifies first, that is strong evidence for Session 3.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>9. Exit Ticket</h2>
+    <p>Complete on paper without help. Then explain one answer aloud.</p>
+    <ol class="work-set">
+      <li><span class="math">-3(2x - 4) + 5x</span></li>
+      <li>Write <span class="math">4 + 2x² - 7x + 3x² + 2x - 1</span> in standard form.</li>
+      <li>Explain the difference between <strong>simplifying an expression</strong> and <strong>solving an equation</strong>.</li>
+      <li>If Branch B was used: solve <span class="math">2(x + 3) + x = 15</span>.</li>
+    </ol>
+  </div>
+
+  <details class="card tutor-only">
+    <summary>10. Hidden Tutor Notes & Teacher Edition</summary>
+    <div style="padding-top:12px">
+      <h3>Instructional priorities</h3>
+      <ul>
+        <li><strong>Pace:</strong> Shivam learned quickly in Session 1. Once a skill is accurate and explainable, advance rather than assigning repetition for its own sake.</li>
+        <li><strong>Paper first:</strong> The website tools make structure visible. They do not replace handwritten algebra.</li>
+        <li><strong>Language:</strong> Use “same variable part, including exponent” for like terms and “keep the sign attached to the term” for distribution.</li>
+        <li><strong>Negative distribution:</strong> A repeated error such as <span class="math">-3(x - 4) = -3x - 12</span> is conceptual. Rebuild the signed multiplication, not merely the arithmetic answer.</li>
+        <li><strong>Standard form:</strong> Expect descending powers: <span class="math">x²</span>, then <span class="math">x</span>, then constants.</li>
+        <li><strong>Equation bridge:</strong> Do not say “move it to the other side.” Name the inverse operation and show it on both sides so balance is preserved.</li>
+      </ul>
+
+      <h3>Suggested transitions</h3>
+      <p><strong>Like terms → distribution:</strong> “We know how to combine terms once we can see them. Parentheses can hide those terms. Distribution brings them into view without changing the value of the expression.”</p>
+      <p><strong>Distribution → multi-step simplification:</strong> “Distribution creates the terms; combining like terms cleans them up.”</p>
+      <p><strong>Expressions → equations:</strong> “Simplifying changes the form but keeps the same value for every x. Solving asks which x makes one equality true.”</p>
+
+      <h3>Diagnostic decision rules</h3>
+      <ul>
+        <li><strong>One arithmetic slip, corrected independently:</strong> continue.</li>
+        <li><strong>Repeated missed distribution:</strong> return to arrows/area model for one example.</li>
+        <li><strong>Repeated negative-sign error:</strong> isolate signed multiplication before returning to the full expression.</li>
+        <li><strong>Combining unlike terms:</strong> sort by variable part/exponent before doing arithmetic.</li>
+        <li><strong>Correct answers but weak explanation:</strong> ask for justification before advancing to equations.</li>
+      </ul>
+
+      <h3>Answer key</h3>
+      <p><strong>Warm-up:</strong> 14; 12; 11x − 3; 7y + 2; 5x² + x + 8.</p>
+      <p><strong>Like Terms:</strong> 12x + 3; 5y + 6; 2a² + 7a; 3m − 5.</p>
+      <p><strong>Guided 1–20:</strong> 11x; 5y + 7; 7a − 9; 3m − 4; 5x² + 4x; 3p² + 5p + 9; 4x + 24; 6y − 15; −2x − 14; −15a + 20; 7x + 6; 5y − 4; −x + 12; 6m + 19; 8x − 7; −3y + 16; 7x² − 2x + 3; 4x − 6; 6a − 15; −2n + 1.</p>
+      <p><strong>Independent 1–5:</strong> 8x − 31; −2y + 11; 2x² + 5x + 1; 3a + 2; 3m − 13.</p>
+      <p><strong>Branch A:</strong> 5x + 15; −2y + 12; 7a − 17; −2m − 14; x² − 3x + 6; 4p − 21.</p>
+      <p><strong>Branch B 1–8:</strong> x=12; x=7; x=7; y=6; x=4; x=3; x=4; y=3.</p>
+      <p><strong>Exit:</strong> #1 −x + 12; #2 5x² − 5x + 3; #3 should state that simplifying rewrites an expression equivalently while solving finds variable value(s) that make an equation true; #4 x=3.</p>
+
+      <h3>After-session capture</h3>
+      <ul>
+        <li>Record which branch was used.</li>
+        <li>Record the exact error pattern, if any: sign, unlike-term combination, missed distribution, exponent, standard-form ordering, equation balance, or arithmetic.</li>
+        <li>Record which problems Shivam solved with no prompting and where he needed a cue.</li>
+        <li>If Branch B was used, record whether he chose to simplify first without being told.</li>
+        <li>Build Session 3 from these observations. Do not prebuild the remaining sequence from assumptions.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="card parent-only">
+    <summary>11. Hidden Parent Summary</summary>
+    <div style="padding-top:12px">
+      <p>Today Shivam strengthened the algebra skills that connect expression work to equation solving. He practiced identifying like terms, using the distributive property, simplifying increasingly complex expressions, managing negative signs, and writing expressions in standard form. The lesson emphasized handwritten mathematics and explaining why each algebraic step was valid.</p>
+      <p>Once he completed the independent mastery check, we used his accuracy and explanations to decide whether to reinforce expression skills or begin equation solving. If he was ready to advance, we introduced equations as a balance relationship and connected his simplification skills directly to solving. Session 3 will be built from the exact evidence we saw today so the pace remains appropriately challenging.</p>
+    </div>
+  </details>
+</section>
+
+<section id="assessment" class="panel">
+  <div class="card"><span class="pill">Session 1 • Completed / Accessible</span><h2>Algebra Readiness Assessment</h2><p>This assessment remains available for reference or re-entry. Show scratch work and explain selected answers aloud. Enter only the final answer in each box.</p></div>
+  <form id="quiz"></form>
+  <div class="card actions"><button type="button" class="btn" onclick="gradeAssessment()">Save Results</button><button type="button" class="btn secondary" onclick="saveProgress()">Save Progress</button><button type="button" class="btn secondary" onclick="clearAssessment()">Clear Answers</button></div>
+</section>
+
+<section id="results" class="panel">
+  <div id="tutorControls" class="card tutor-controls"><h3>Session Management</h3><p class="small">Tutor Code and VT Session Engine functionality remain unchanged.</p><div class="actions"><button type="button" class="btn" onclick="copyTutorCode()">Copy Tutor Code</button><button type="button" class="btn" onclick="showLoadDialog()">Load Tutor Code</button><button type="button" class="btn secondary" onclick="resetSession()">Reset Session</button></div></div>
+  <div id="emptyResults" class="card"><h2>Assessment results</h2><p>Complete or load Session 1 assessment data to display Shivam's saved skill profile.</p></div>
+  <div id="resultContent" class="hidden"></div>
+</section>
+
+<section id="home" class="panel">
+  <div class="hero-grid">
+    <div class="card"><span class="pill">Current Direction</span><h2>One excellent lesson at a time</h2><p>Session 1 identified strong mathematical intuition and a fast learning pace, with targeted needs around order of operations, expression simplification, like terms, distribution, exponents, and standard form. Session 2 is the active lesson and uses that evidence directly.</p><div class="actions"><button class="btn gold" onclick="showTab('session2')">Open Session 2</button></div></div>
+    <div class="card"><h3>What stays constant</h3><ul><li>Paper-first mathematics</li><li>Explain reasoning aloud</li><li>Increase difficulty when mastery is visible</li><li>Build the next lesson from live evidence</li></ul></div>
+  </div>
+</section>
+
+<p class="footer-note">Shivam's Math Path • Clear thinking, clean algebra, one step at a time.</p>
+</main>
+
+<div id="loadDialog" class="code-dialog hidden">
+  <h2 style="margin-top:0;">Load Tutor Code</h2>
+  <p>Paste a tutor code below to restore a previous session:</p>
+  <textarea id="codeInput" placeholder="Paste tutor code here (starts with VT-)"></textarea>
+  <div class="actions"><button type="button" class="btn" onclick="confirmLoadCode()">Load Session</button><button type="button" class="btn secondary" onclick="closeLoadDialog()">Cancel</button></div>
+</div>
+<div id="loadDialogOverlay" class="code-dialog-overlay hidden" onclick="closeLoadDialog()"></div>
+
+<script src="vt-session-engine.js"></script>
+<script>
+const questions=[
+{id:1,domain:'Integer Operations',prompt:'Evaluate: 8 - 13',answer:'-5'},
+{id:2,domain:'Integer Operations',prompt:'Evaluate: -6 + 14',answer:'8'},
+{id:3,domain:'Integer Operations',prompt:'Evaluate: (-4)(7)',answer:'-28'},
+{id:4,domain:'Order of Operations',prompt:'Evaluate: 18 ÷ 3 + 2(4)',answer:'14'},
+{id:5,domain:'Order of Operations',prompt:'Evaluate: 5 + 3² - 2',answer:'12'},
+{id:6,domain:'Algebra Vocabulary',prompt:'In 7x + 4, what is the coefficient?',answer:'7'},
+{id:7,domain:'Algebra Vocabulary',prompt:'In 9 - 3y, what is the constant?',answer:'9'},
+{id:8,domain:'Combining Like Terms',prompt:'Simplify: 5x + 9 + 12x + 5',answer:'17x+14'},
+{id:9,domain:'Combining Like Terms',prompt:'Simplify: 9y - 10 - 6y + 7',answer:'3y-3'},
+{id:10,domain:'Combining Like Terms',prompt:'Simplify: y - 13y + 9y + 10 + 8',answer:'-3y+18'},
+{id:11,domain:'Combining Like Terms',prompt:'Simplify: -2k + (-4k) + 5',answer:'-6k+5'},
+{id:12,domain:'Signed Terms',prompt:'Simplify: 4z - (-3z)',answer:'7z'},
+{id:13,domain:'Signed Terms',prompt:'Simplify: -2k - (-5) + 1',answer:'-2k+6'},
+{id:14,domain:'Distributive Property',prompt:'Simplify: 3(x + 4)',answer:'3x+12'},
+{id:15,domain:'Distributive Property',prompt:'Simplify: -2(3y - 5)',answer:'-6y+10'},
+{id:16,domain:'One-Step Equations',prompt:'Solve: a + 4 = 12',answer:'8'},
+{id:17,domain:'One-Step Equations',prompt:'Solve: d - 5 = 19',answer:'24'},
+{id:18,domain:'One-Step Equations',prompt:'Solve: 5g = 20',answer:'4'},
+{id:19,domain:'One-Step Equations',prompt:'Solve: 10 - p = 10',answer:'0'},
+{id:20,domain:'One-Step Equations',prompt:'Solve: ½t = 6',answer:'12'},
+{id:21,domain:'Two-Step Equations',prompt:'Solve: 3x + 5 = 20',answer:'5'},
+{id:22,domain:'Two-Step Equations',prompt:'Solve: 4y - 7 = 13',answer:'5'},
+{id:23,domain:'Equation Meaning',prompt:'Write an equation: A number n increased by 8 is 21.',answer:'n+8=21'},
+{id:24,domain:'Equation Meaning',prompt:'Does x = 6 make 2x + 3 = 15 true? Enter yes or no.',answer:'yes'}
+];
+const aliases={'17x + 14':'17x+14','14+17x':'17x+14','3y - 3':'3y-3','-3 + 3y':'3y-3','-3y + 18':'-3y+18','18-3y':'-3y+18','-6k + 5':'-6k+5','5-6k':'-6k+5','7z':'7z','-2k + 6':'-2k+6','6-2k':'-2k+6','3x + 12':'3x+12','12+3x':'3x+12','-6y + 10':'-6y+10','10-6y':'-6y+10','n + 8 = 21':'n+8=21','21=n+8':'n+8=21','y':'yes','true':'yes'};
+VTSessionEngine.initialize({loadFromStorage:true});
+function showToast(message){const toast=document.createElement('div');toast.className='toast';toast.textContent=message;document.body.appendChild(toast);setTimeout(()=>toast.remove(),4000)}
+function normalize(v){v=(v||'').toLowerCase().replace(/\s+/g,'').replace(/\*/g,'').replace(/−/g,'-');return aliases[v]||v}
+function renderQuiz(){const form=document.getElementById('quiz');let current='';questions.forEach(q=>{if(q.domain!==current){current=q.domain;form.insertAdjacentHTML('beforeend',`<div class="section-title">${current}</div>`)}form.insertAdjacentHTML('beforeend',`<div class="question"><p>${q.id}. ${q.prompt}</p><input aria-label="Question ${q.id}" id="q${q.id}" autocomplete="off" placeholder="Final answer" /></div>`)});loadProgress()}
+function saveProgress(){const data={};questions.forEach(q=>data[q.id]=document.getElementById('q'+q.id).value);const state=VTSessionEngine.getState();const notes=(state.notes||[]).filter(n=>n.id!=='assessment-progress');notes.push({id:'assessment-progress',content:JSON.stringify(data),date:new Date().toISOString()});VTSessionEngine.setState({notes});VTSessionEngine.saveLocal();showToast('Progress saved!')}
+function loadProgress(){const state=VTSessionEngine.getState();if(state.notes&&state.notes.length>0){const progressNote=state.notes.find(n=>n.id==='assessment-progress');if(progressNote){const data=JSON.parse(progressNote.content);questions.forEach(q=>{if(data[q.id])document.getElementById('q'+q.id).value=data[q.id]})}}}
+function clearAssessment(){if(confirm('Clear all assessment answers?')){questions.forEach(q=>document.getElementById('q'+q.id).value='');const state=VTSessionEngine.getState();VTSessionEngine.setState({notes:(state.notes||[]).filter(n=>n.id!=='assessment-progress')});VTSessionEngine.saveLocal();showToast('Answers cleared!')}}
+function gradeAssessment(){const domains={};const detail=[];questions.forEach(q=>{const response=document.getElementById('q'+q.id).value;const correct=normalize(response)===normalize(q.answer);if(!domains[q.domain])domains[q.domain]={correct:0,total:0};domains[q.domain].total++;if(correct)domains[q.domain].correct++;detail.push({...q,response,correct})});const total=detail.filter(x=>x.correct).length;const result={date:new Date().toLocaleDateString(),total,max:questions.length,domains,detail};const masteryScores={};Object.entries(result.domains).forEach(([name,d])=>{masteryScores[name.toLowerCase().replace(/\s+/g,'-')]=d.correct/d.total});const state=VTSessionEngine.getState();const notes=(state.notes||[]).filter(n=>!['assessment-progress','assessment-result'].includes(n.id));notes.push({id:'assessment-progress',content:JSON.stringify(Object.fromEntries(detail.map(x=>[x.id,x.response]))),date:new Date().toISOString()},{id:'assessment-result',content:JSON.stringify(result),date:new Date().toISOString()});VTSessionEngine.setState({student:{name:'Shivam'},assessment:{current:result,history:[result]},mastery:masteryScores,notes});VTSessionEngine.saveLocal();renderResults(result);showTab('results');showToast('Results saved!')}
+function level(p){return p>=.8?'Proficient':p>=.6?'Developing':'Priority'}
+function renderResults(r){document.getElementById('emptyResults').classList.add('hidden');const box=document.getElementById('resultContent');box.classList.remove('hidden');const pct=Math.round(r.total/r.max*100);let dhtml='';Object.entries(r.domains).forEach(([name,d])=>{const p=d.correct/d.total;dhtml+=`<div class="domain"><div class="domain-head"><span>${name}</span><span>${d.correct}/${d.total} • ${level(p)}</span></div><div class="scorebar"><span style="width:${Math.round(p*100)}%"></span></div></div>`});box.innerHTML=`<div class="card"><span class="pill">Assessment saved ${r.date}</span><h2>Skill Profile: ${r.total}/${r.max} (${pct}%)</h2><p>Session 2 is built from the observed assessment needs and live Session 1 progress. Future lessons will be built one at a time from current evidence.</p>${dhtml}<div class="actions"><button class="btn" onclick="showTab('session2')">Open Session 2</button><button class="btn secondary" onclick="window.print()">Print Summary</button></div></div><div class="card tutor-only answer-key"><h3>Tutor Notes & Answer Review</h3><p class="small">Use errors diagnostically: distinguish calculation errors, sign errors, vocabulary confusion, and equation-operation errors.</p><table><thead><tr><th>#</th><th>Skill</th><th>Response</th><th>Correct answer</th><th>Status</th></tr></thead><tbody>${r.detail.map(x=>`<tr><td>${x.id}</td><td>${x.domain}</td><td>${x.response||'—'}</td><td>${x.answer}</td><td>${x.correct?'✓':'Review'}</td></tr>`).join('')}</tbody></table></div>`}
+function showTab(id){document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.tab===id));document.getElementById(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
+function copyTutorCode(){const code=VTSessionEngine.copyTutorCode();if(code){navigator.clipboard.writeText(code).then(()=>showToast('Tutor Code copied!')).catch(()=>alert('Copy failed. Please copy this code manually:\n\n'+code))}else{showToast('Failed to generate code. Please try again.')}}
+function showLoadDialog(){document.getElementById('loadDialog').classList.remove('hidden');document.getElementById('loadDialogOverlay').classList.remove('hidden');document.getElementById('codeInput').focus()}
+function closeLoadDialog(){document.getElementById('loadDialog').classList.add('hidden');document.getElementById('loadDialogOverlay').classList.add('hidden');document.getElementById('codeInput').value=''}
+function confirmLoadCode(){const code=document.getElementById('codeInput').value.trim();if(!code){showToast('Please paste a tutor code');return}if(VTSessionEngine.importTutorCode(code)){closeLoadDialog();const state=VTSessionEngine.getState();if(state.assessment&&state.assessment.current){renderResults(state.assessment.current)}loadProgress();showTab('results');showToast('Session restored successfully!')}else{showToast('Failed to load code. It may be corrupted or invalid.')}}
+function resetSession(){if(confirm('Reset the saved tutoring session data? This cannot be undone.')){VTSessionEngine.reset();VTSessionEngine.saveLocal();questions.forEach(q=>document.getElementById('q'+q.id).value='');document.getElementById('emptyResults').classList.remove('hidden');document.getElementById('resultContent').classList.add('hidden');showTab('assessment');showToast('Session reset!')}}
+function initLikeTermSorter(){const bank=document.getElementById('sortBank');const terms=[['7x','x'],['-3','constant'],['2x²','x2'],['-4x','x'],['5','constant'],['-x²','x2']];let selectedZone='x';function setSelected(zone){selectedZone=zone;document.querySelectorAll('.sort-zone').forEach(z=>z.classList.toggle('selected',z.dataset.zone===zone))}document.querySelectorAll('.sort-zone').forEach(zone=>zone.addEventListener('click',()=>setSelected(zone.dataset.zone)));terms.forEach(([label,type])=>{const b=document.createElement('button');b.type='button';b.className='sort-term';b.textContent=label;b.dataset.type=type;b.addEventListener('click',()=>{document.querySelector(`.sort-zone[data-zone="${selectedZone}"]`).appendChild(b);evaluateSort()});bank.appendChild(b)});setSelected('x')}
+function evaluateSort(){const buttons=[...document.querySelectorAll('.sort-term')];const placed=buttons.filter(b=>b.parentElement.classList.contains('sort-zone'));if(placed.length<buttons.length){document.getElementById('sortFeedback').textContent='Sort all six terms, then explain why each group belongs together.';return}const correct=placed.every(b=>b.parentElement.dataset.zone===b.dataset.type);document.getElementById('sortFeedback').textContent=correct?'Structure check: correct. Now combine each group on paper.':'One or more terms are grouped by appearance rather than matching variable part. Recheck variable and exponent.'}
+function parseSimpleTerm(term){const t=term.replace(/\s+/g,'');if(/^[-+]?\d+$/.test(t))return{coef:Number(t),variable:''};const m=t.match(/^([-+]?\d*)?([a-zA-Z](?:\^?2|²)?)$/);if(!m)return null;let c=m[1];if(c===''||c==='+')c=1;else if(c==='-')c=-1;else c=Number(c);return{coef:c,variable:m[2].replace('^2','²')}}
+function formatTerm(coef,variable){if(variable==='')return String(coef);if(coef===1)return variable;if(coef===-1)return '-'+variable;return String(coef)+variable}
+function formatSignedLabel(term){const value=formatTerm(term.coef,term.variable);return value.startsWith('-')?value:'+'+value}
+function joinSigned(a,b){return b.startsWith('-')?`${a} - ${b.slice(1)}`:`${a} + ${b}`}
+function updateAreaModel(){const f=Number(document.getElementById('areaFactor').value.trim());const a=parseSimpleTerm(document.getElementById('areaA').value);const b=parseSimpleTerm(document.getElementById('areaB').value);if(!Number.isFinite(f)||!a||!b){document.getElementById('areaEquation').textContent='Use simple terms such as 3, x, -5, or 2y.';return}const pa=formatTerm(f*a.coef,a.variable),pb=formatTerm(f*b.coef,b.variable);document.getElementById('areaCellA').textContent=pa;document.getElementById('areaCellB').textContent=pb;const inside=joinSigned(formatTerm(a.coef,a.variable),formatTerm(b.coef,b.variable));document.getElementById('areaEquation').textContent=`${f}(${inside}) = ${joinSigned(pa,pb)}`}
+function parseBinomial(text){const t=text.replace(/\s+/g,'').replace(/-/g,'+-');const parts=t.split('+').filter(Boolean);if(parts.length!==2)return null;return parts.map(parseSimpleTerm).every(Boolean)?parts.map(parseSimpleTerm):null}
+function multiplyTerms(a,b){const coef=a.coef*b.coef;if(!a.variable&&!b.variable)return formatTerm(coef,'');if(!a.variable)return formatTerm(coef,b.variable);if(!b.variable)return formatTerm(coef,a.variable);if(a.variable===b.variable&&!a.variable.includes('²'))return formatTerm(coef,a.variable+'²');if(a.variable.includes('²')||b.variable.includes('²'))return formatTerm(coef,a.variable+b.variable);return formatTerm(coef,a.variable+b.variable)}
+function updateBoxMethod(){const f1=parseBinomial(document.getElementById('boxFactor1').value);const f2=parseBinomial(document.getElementById('boxFactor2').value);if(!f1||!f2){document.getElementById('boxSummary').textContent='Use two-term factors such as x + 2 or x - 4.';return}document.getElementById('boxTop1').textContent=formatTerm(f1[0].coef,f1[0].variable);document.getElementById('boxTop2').textContent=formatSignedLabel(f1[1]);document.getElementById('boxSide1').textContent=formatTerm(f2[0].coef,f2[0].variable);document.getElementById('boxSide2').textContent=formatSignedLabel(f2[1]);const products=[multiplyTerms(f1[0],f2[0]),multiplyTerms(f1[1],f2[0]),multiplyTerms(f1[0],f2[1]),multiplyTerms(f1[1],f2[1])];['box11','box12','box21','box22'].forEach((id,i)=>document.getElementById(id).textContent=products[i]);document.getElementById('boxSummary').textContent=`Trace each cell to its top and side terms: ${products.join(', ')}. Combine any like terms on paper.`}
+document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>showTab(b.dataset.tab)));
+renderQuiz();const state=VTSessionEngine.getState();if(state.assessment&&state.assessment.current)renderResults(state.assessment.current);initLikeTermSorter();['areaFactor','areaA','areaB'].forEach(id=>document.getElementById(id).addEventListener('input',updateAreaModel));['boxFactor1','boxFactor2'].forEach(id=>document.getElementById(id).addEventListener('input',updateBoxMethod));updateAreaModel();updateBoxMethod();
+</script>
+</body>
+</html>
