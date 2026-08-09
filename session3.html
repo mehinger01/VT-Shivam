@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shivam's Math Path — Session 3</title>
+<style>
+:root{--navy:#17324d;--blue:#2f6fa3;--sky:#eaf5ff;--gold:#f2b84b;--green:#2f855a;--red:#b44343;--ink:#1f2937;--muted:#64748b;--card:#fff;--bg:#f6f9fc;--line:#dce5ee}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}header{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;padding:28px 18px}.wrap{max-width:1050px;margin:auto}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:800;opacity:.85}h1{margin:.25rem 0 .4rem;font-size:clamp(2rem,5vw,3.4rem)}header p{max-width:780px;margin:0;font-size:1.08rem}.nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.nav a,.btn{border:0;border-radius:999px;padding:11px 18px;font-weight:800;text-decoration:none;display:inline-block;cursor:pointer}.nav a{background:#ffffff20;color:#fff;border:1px solid #ffffff45}.nav a.active{background:#fff;color:var(--navy)}main{padding:24px 16px 60px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;margin:0 0 18px;box-shadow:0 6px 22px #17324d0d}.grid-2,.grid-3{display:grid;gap:16px}.grid-2{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(3,1fr)}@media(max-width:760px){.grid-2,.grid-3{grid-template-columns:1fr}}h2{color:var(--navy);margin-top:0}h3{margin:.2rem 0 .5rem;color:var(--navy)}h4{color:var(--navy);margin:1rem 0 .4rem}.pill{display:inline-block;background:var(--sky);color:var(--blue);border-radius:999px;padding:5px 10px;font-weight:800;font-size:.82rem}.lesson-banner{background:linear-gradient(135deg,#fff,#f0f7ff);border:1px solid #cfe2f4}.notice{background:#fff8e8;border-left:5px solid var(--gold);padding:14px;border-radius:10px}.success{background:#eaf8ef;border-left:5px solid var(--green);padding:14px;border-radius:10px}.transition{background:#eef7ff;border-left:5px solid var(--blue);padding:16px 18px;border-radius:10px;margin:18px 0}.checkpoint{background:#f4f8fc;border:1px solid #cbddeb;border-radius:12px;padding:14px;margin:15px 0}.teacher-move{font-size:.92rem;color:#40566b;border-left:3px solid #9fb9d0;padding-left:10px;margin-top:8px}.math{font-family:"Cambria Math",Cambria,serif;font-size:1.12em}.flow{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:14px 0}.flow span{background:#eef4f9;border-radius:9px;padding:7px 10px;font-weight:800}.flow b{color:var(--blue)}.work-set{counter-reset:item;display:grid;grid-template-columns:repeat(2,1fr);gap:10px 26px;padding-left:0;list-style:none}.work-set li{counter-increment:item;border-bottom:1px solid #e7edf3;padding:9px 4px 14px;min-height:52px}.work-set li:before{content:counter(item) ". ";font-weight:900;color:var(--blue)}@media(max-width:700px){.work-set{grid-template-columns:1fr}}.branch{border-top:5px solid var(--gold)}.method-card{border-left:5px solid var(--blue)}.equation-compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}.equation-compare>div{padding:16px;border-radius:12px;border:1px solid var(--line);background:#fff}.equation-compare strong{color:var(--navy)}@media(max-width:700px){.equation-compare{grid-template-columns:1fr}}.misconception{border:1px solid #f1caca;border-left:5px solid var(--red);border-radius:12px;padding:15px;background:#fffafa}.wrong{color:var(--red);font-weight:900}.btn{background:var(--blue);color:#fff}.btn.secondary{background:#e8eef4;color:var(--navy)}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.tutor-only{border:2px dashed #8aa8c4;background:#f3f8fc}.parent-only{border:2px dashed #d7b45b;background:#fffaf0}.small{font-size:.9rem;color:var(--muted)}details summary{cursor:pointer;font-weight:900;color:var(--navy)}.footer-note{text-align:center;color:var(--muted);margin-top:30px}.toast{position:fixed;bottom:20px;left:20px;background:var(--green);color:#fff;padding:14px 18px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.2);z-index:1000}.code-dialog{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;border-radius:12px;padding:28px;box-shadow:0 10px 40px rgba(0,0,0,.2);z-index:2000;max-width:500px;width:90%}.code-dialog-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1999}.code-dialog textarea{width:100%;height:100px;padding:12px;border:2px solid #cbd5e1;border-radius:8px;font-family:monospace}.hidden{display:none!important}@media print{header,.nav,.actions{display:none!important}.card{box-shadow:none;break-inside:avoid}body{background:#fff}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="eyebrow">Virtual Tutoring • Middle School Math</div><h1>Shivam's Math Path</h1><p>Strong algebra is built by preserving equality, simplifying structure, and explaining why every move is legal.</p><div class="nav"><a class="active" href="index.html">Session 3: Active Lesson</a><a href="session2.html">Session 2 + Session 1 Archive</a></div></div></header>
+<main class="wrap">
+
+<section id="session3">
+  <div class="card lesson-banner">
+    <span class="pill">Session 3 • Active Lesson</span>
+    <h2>Simplify When Needed → Then Solve</h2>
+    <p><strong>Main idea:</strong> solving an equation is not moving symbols around. An equation says two quantities are equal. We preserve that equality while using legal operations to reveal the value of the variable.</p>
+    <div class="notice"><strong>How we work:</strong> the website coaches. The mathematics happens on paper. Explain → demonstrate → work by hand → discuss reasoning → check → increase difficulty.</div>
+  </div>
+
+  <div class="card">
+    <h2>1. Learning Objectives</h2>
+    <p>By the end of this session, Shivam will be able to:</p>
+    <ul>
+      <li>explain what an equation means and why equal operations on both sides preserve equality;</li>
+      <li>solve one-step and two-step equations using inverse operations;</li>
+      <li>recognize when an equation should be simplified before solving;</li>
+      <li>use distribution and combining like terms inside equations;</li>
+      <li>solve equations with variables on both sides when ready;</li>
+      <li>check a solution by substitution and explain whether it makes the original equation true.</li>
+    </ul>
+    <div class="flow"><span>Read the equation</span><b>→</b><span>Simplify if needed</span><b>→</b><span>Undo operations</span><b>→</b><span>Keep balance</span><b>→</b><span>Check</span></div>
+  </div>
+
+  <div class="card">
+    <h2>2. Warm-up Retrieval: Evidence Gate</h2>
+    <p><strong>Paper only.</strong> This is short on purpose. The goal is to determine what is secure today, not to repeat Session 2.</p>
+    <ol class="work-set">
+      <li><span class="math">-3(2x - 5) + 4x</span></li>
+      <li>Write <span class="math">5 + 2x² - 3x + 4x² + x - 7</span> in standard form.</li>
+      <li><span class="math">2(x + 4) + 3(x - 1)</span></li>
+      <li><span class="math">4(2y - 3) - 2(y + 5) + 7</span></li>
+      <li><strong>If you know how:</strong> solve <span class="math">2(x + 3) + x = 15</span>.</li>
+    </ol>
+    <div class="checkpoint"><strong>Tutor decision:</strong> If #1–4 are accurate with clear reasoning, expression simplification is sufficiently secure for today. Move directly into equations. If one pattern repeats, repair only that pattern with the matching mini-repair below, then move on as soon as it is corrected.</div>
+    <div class="grid-3">
+      <div class="misconception"><h3>Negative distribution</h3><p class="math">-2(x - 6)</p><p>Ask: “What signed term is the second term?” Then work <span class="math">-3(2a - 5)</span>.</p></div>
+      <div class="misconception"><h3>Unlike terms / exponents</h3><p class="math">3x² + 4x - x² + 2x</p><p>Sort by variable part before doing any arithmetic.</p></div>
+      <div class="misconception"><h3>Multi-step cleanup</h3><p class="math">3(x + 2) - 2(x - 4)</p><p>Use the order: distribute → combine → standard form.</p></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>3. Direct Instruction: What Does It Mean to Solve?</h2>
+    <div class="equation-compare">
+      <div><strong>Expression</strong><p class="math">3x + 8</p><p>There is no equals sign and no single value of <span class="math">x</span> to find. We can evaluate it for a chosen x or simplify it if possible.</p></div>
+      <div><strong>Equation</strong><p class="math">3x + 8 = 20</p><p>This states that two quantities are equal. We are looking for the value of <span class="math">x</span> that makes the statement true.</p></div>
+    </div>
+
+    <div class="card method-card">
+      <h3>A. Equality is a balance</h3>
+      <p>If <span class="math">A = B</span>, adding, subtracting, multiplying, or dividing both sides by the same allowable number keeps the two sides equal.</p>
+      <p class="math">x + 7 = 19</p>
+      <p>Subtract 7 from <strong>both</strong> sides:</p>
+      <p class="math">x + 7 - 7 = 19 - 7</p>
+      <p class="math"><strong>x = 12</strong></p>
+      <p class="teacher-move"><strong>Ask:</strong> “Why did we subtract 7 from both sides instead of just making the +7 disappear?” Expected idea: because the equality must stay balanced.</p>
+    </div>
+
+    <div class="card method-card">
+      <h3>B. Inverse operations undo structure</h3>
+      <p>Inverse operations reverse each other: addition/subtraction and multiplication/division.</p>
+      <p class="math">3x + 5 = 20</p>
+      <p>Undo the +5 first: <span class="math">3x = 15</span>.</p>
+      <p>Then undo multiplication by 3: <span class="math">x = 5</span>.</p>
+      <p><strong>Check in the original:</strong> <span class="math">3(5)+5=20</span>. The left side becomes 20, so the solution is correct.</p>
+    </div>
+
+    <div class="card method-card">
+      <h3>C. Simplify first when structure is hiding the equation</h3>
+      <p class="math">2(x + 4) + x = 17</p>
+      <p>First make the left side clearer:</p>
+      <p class="math">2x + 8 + x = 17</p>
+      <p class="math">3x + 8 = 17</p>
+      <p>Now solve: subtract 8 from both sides, then divide by 3.</p>
+      <p class="math"><strong>x = 3</strong></p>
+      <div class="transition"><strong>Core habit:</strong> Before solving, ask: “Can either side be simplified?” If yes, clean the structure first. Then use inverse operations while preserving equality.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>4. Guided Practice</h2>
+    <p>Work on paper. The set is intentionally longer than necessary so the tutor can skip ahead as soon as mastery is visible.</p>
+
+    <h3>A. Rapid retrieval: one-step equations</h3>
+    <ol class="work-set">
+      <li><span class="math">x + 8 = 21</span></li>
+      <li><span class="math">y - 6 = 15</span></li>
+      <li><span class="math">5m = 35</span></li>
+      <li><span class="math">n ÷ 4 = 6</span></li>
+    </ol>
+    <div class="checkpoint"><strong>Checkpoint:</strong> If these are immediate and Shivam can name the inverse operation, skip directly to #5. Do not turn one-step equations into busywork.</div>
+
+    <h3>B. Two-step equations</h3>
+    <ol class="work-set" start="5">
+      <li><span class="math">2x + 5 = 17</span></li>
+      <li><span class="math">3y - 7 = 14</span></li>
+      <li><span class="math">4a + 9 = 33</span></li>
+      <li><span class="math">5m - 8 = 2</span></li>
+      <li><span class="math">6p + 4 = 40</span></li>
+    </ol>
+    <p class="teacher-move"><strong>Discussion prompt:</strong> “Which operation is attached to the variable most directly? Which operation happened last to the expression?” Use the structure to justify the undo order.</p>
+
+    <h3>C. Simplify first</h3>
+    <ol class="work-set" start="10">
+      <li><span class="math">2x + 3x = 25</span></li>
+      <li><span class="math">4y - 2y + 6 = 18</span></li>
+      <li><span class="math">3(x + 2) = 21</span></li>
+      <li><span class="math">2(x + 4) + x = 17</span></li>
+      <li><span class="math">5(2a - 1) - 3a = 23</span></li>
+    </ol>
+    <div class="checkpoint"><strong>Checkpoint:</strong> Before Shivam writes anything on #12–14, ask: “What can be simplified first?” If he identifies distribution/like terms without prompting, reduce tutor talk.</div>
+
+    <h3>D. Distribution and variables on both sides</h3>
+    <ol class="work-set" start="15">
+      <li><span class="math">4(x - 1) + 2x = 20</span></li>
+      <li><span class="math">3(2y + 1) - y = 18</span></li>
+      <li><span class="math">2(x + 5) + 4 = 3x + 1</span></li>
+      <li><span class="math">5(x - 2) + 3 = 2x + 11</span></li>
+      <li><span class="math">4(2m - 3) - m = 2m + 8</span></li>
+      <li><span class="math">-2(x - 3) + 4x = 18</span></li>
+    </ol>
+    <p class="teacher-move"><strong>Key prompt:</strong> “Can you make each side simpler before deciding what to undo?” Avoid the phrase “move it to the other side.” Require the actual operation performed on both sides.</p>
+  </div>
+
+  <div class="card">
+    <h2>5. Independent Practice</h2>
+    <p><strong>Five meaningful problems. Paper only.</strong> No coaching unless Shivam is genuinely stuck. He should check at least two solutions by substitution.</p>
+    <ol class="work-set">
+      <li><span class="math">7x - 5 = 30</span></li>
+      <li><span class="math">3(x + 4) = 27</span></li>
+      <li><span class="math">2(x + 5) + 3x = 30</span></li>
+      <li><span class="math">4(2y - 3) - 2y = 24</span></li>
+      <li><span class="math">3(x + 2) + 2(x - 4) = 2x + 19</span></li>
+    </ol>
+    <div class="notice"><strong>Mastery evidence:</strong> Strong evidence is at least 4/5 correct, appropriate simplification before inverse operations, equations kept balanced, and a correct substitution check without being told how.</div>
+  </div>
+
+  <div class="card branch">
+    <h2>6. Decision Point</h2>
+    <p>Choose from evidence, not from the clock.</p>
+    <div class="grid-2">
+      <div class="card">
+        <span class="pill">Extension A</span>
+        <h3>Targeted Repair</h3>
+        <p><strong>Use only the block matching the observed error.</strong> Stop as soon as the pattern is repaired.</p>
+        <h4>If inverse operations / balance is the issue</h4>
+        <ol class="work-set">
+          <li><span class="math">x - 9 = 14</span></li>
+          <li><span class="math">4x = 36</span></li>
+          <li><span class="math">3x + 4 = 19</span></li>
+          <li><span class="math">5y - 7 = 28</span></li>
+        </ol>
+        <h4>If simplifying first is the issue</h4>
+        <ol class="work-set">
+          <li><span class="math">2x + 5x = 42</span></li>
+          <li><span class="math">3(x + 2) = 24</span></li>
+          <li><span class="math">2(x + 4) + x = 20</span></li>
+          <li><span class="math">-2(x - 5) + 3x = 18</span></li>
+        </ol>
+        <h4>If distribution / signs is the issue</h4>
+        <ol class="work-set">
+          <li><span class="math">-3(x - 4) = 18</span></li>
+          <li><span class="math">4(2x - 1) - 3x = 21</span></li>
+          <li><span class="math">-2(3y + 1) + 4y = -10</span></li>
+        </ol>
+        <p class="teacher-move">Model one parallel example at most. Then return the pencil to Shivam.</p>
+      </div>
+
+      <div class="card">
+        <span class="pill">Extension B</span>
+        <h3>Deeper Algebra: When Variables Appear on Both Sides</h3>
+        <p><strong>Choose this if:</strong> the independent set is secure and Shivam is explaining the balance logic without prompts.</p>
+        <h4>Demonstrate</h4>
+        <p class="math">5x + 4 = 3x + 18</p>
+        <p>Subtract <span class="math">3x</span> from both sides: <span class="math">2x + 4 = 18</span>.</p>
+        <p>Subtract 4, then divide by 2: <span class="math">x = 7</span>.</p>
+        <p>Check in the original equation before moving on.</p>
+        <h4>Student works by hand</h4>
+        <ol class="work-set">
+          <li><span class="math">5x + 4 = 3x + 18</span></li>
+          <li><span class="math">4(2y - 1) = 6y + 10</span></li>
+          <li><span class="math">3(x + 2) + x = 2(x + 8)</span></li>
+        </ol>
+        <h4>Challenge: What if the variable disappears?</h4>
+        <p>Sometimes simplifying both sides leaves a statement with no variable.</p>
+        <p class="math">3(x + 2) = 3x + 6</p>
+        <p>Both sides simplify to the same expression, so <strong>every value of x works</strong>.</p>
+        <p class="math">3(x + 2) = 3x + 5</p>
+        <p>This becomes <span class="math">6 = 5</span>, which is impossible, so <strong>no value of x works</strong>.</p>
+        <ol class="work-set">
+          <li><span class="math">2(x + 4) = 2x + 8</span></li>
+          <li><span class="math">4(x + 1) - 2x = 2(x + 2)</span></li>
+          <li><span class="math">5(x - 1) = 5x + 2</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>7. Exit Ticket</h2>
+    <p>Complete without help. Then explain one answer aloud.</p>
+    <ol class="work-set">
+      <li><span class="math">3x + 7 = 25</span></li>
+      <li><span class="math">2(x + 4) + x = 20</span></li>
+      <li>In one sentence: Why does doing the same operation to both sides preserve an equation?</li>
+      <li><span class="math">4(x - 2) + 3x = 27</span></li>
+    </ol>
+  </div>
+
+  <details class="card tutor-only">
+    <summary>8. Hidden Tutor Notes & Full Answer Key</summary>
+    <div style="padding-top:12px">
+      <h3>Teaching cues</h3>
+      <ul>
+        <li><strong>Evidence first:</strong> No Session 2 notes were supplied in the build prompt. Treat the warm-up as the live evidence gate. If #1–4 are secure, do not reteach expressions.</li>
+        <li><strong>Language:</strong> Prefer “subtract 5 from both sides” over “move 5 across.” The first names the mathematics; the second hides it.</li>
+        <li><strong>Simplify before solve:</strong> Ask the question, then allow silence: “Can either side be simplified?” Do not automatically announce the step.</li>
+        <li><strong>Check by substitution:</strong> A solution is not just an answer. It is a value that makes the original equation true.</li>
+        <li><strong>Pace:</strong> Skip problems aggressively when the reasoning is secure. The later blocks are available depth, not mandatory volume.</li>
+      </ul>
+
+      <h3>Anticipated misconceptions</h3>
+      <div class="grid-2">
+        <div class="misconception"><h4>“Move it across and change the sign.”</h4><p>Ask what operation was actually performed to both sides. Rewrite one line showing that operation.</p></div>
+        <div class="misconception"><h4>Solving before simplifying</h4><p>If distribution or like terms remain, ask: “What can become simpler before we start undoing?”</p></div>
+        <div class="misconception"><h4>Only changing one side</h4><p>Return to the meaning of the equals sign. Have Shivam state what must remain true after each step.</p></div>
+        <div class="misconception"><h4>Checking the simplified equation only</h4><p>Substitute into the <strong>original</strong> equation so the entire chain of work is tested.</p></div>
+      </div>
+
+      <h3>Answer key</h3>
+      <p><strong>Warm-up:</strong> #1 −2x + 15; #2 6x² − 2x − 2; #3 5x + 5; #4 6y − 15; #5 x=3.</p>
+      <p><strong>Warm-up mini-repair:</strong> −2(x−6)=−2x+12; −3(2a−5)=−6a+15; 3x²+4x−x²+2x=2x²+6x; 3(x+2)−2(x−4)=x+14.</p>
+      <p><strong>Guided 1–4:</strong> x=13; y=21; m=7; n=24.</p>
+      <p><strong>Guided 5–9:</strong> x=6; y=7; a=6; m=2; p=6.</p>
+      <p><strong>Guided 10–14:</strong> x=5; y=6; x=5; x=3; a=4.</p>
+      <p><strong>Guided 15–20:</strong> x=4; y=3; x=13; x=6; m=4; x=6.</p>
+      <p><strong>Independent:</strong> x=5; x=5; x=4; y=6; x=7.</p>
+      <p><strong>Extension A — balance:</strong> x=23; x=9; x=5; y=7.</p>
+      <p><strong>Extension A — simplify first:</strong> x=6; x=6; x=4; x=8.</p>
+      <p><strong>Extension A — distribution/signs:</strong> x=−2; x=5; y=4.</p>
+      <p><strong>Extension B 1–3:</strong> x=7; y=7; x=5.</p>
+      <p><strong>Extension B challenge:</strong> all real numbers; all real numbers; no solution.</p>
+      <p><strong>Exit:</strong> #1 x=6; #2 x=4; #3 should state that applying the same operation to equal quantities keeps them equal; #4 x=5.</p>
+
+      <h3>Evidence to capture for Session 4</h3>
+      <ul>
+        <li>Warm-up #1–4 accuracy and any specific expression-repair pattern needed.</li>
+        <li>Independent score out of 5.</li>
+        <li>Whether Shivam asked “can I simplify first?” or independently simplified before solving.</li>
+        <li>Whether he described inverse operations as actions on both sides rather than “moving” terms.</li>
+        <li>Any repeated distribution or negative-sign error inside equations.</li>
+        <li>Whether he checked solutions in the original equation without prompting.</li>
+        <li>Whether variables-on-both-sides work was reached and, if so, his accuracy.</li>
+        <li>Whether identity/no-solution cases were reached and whether he could explain them conceptually.</li>
+        <li>Pace: where mastery became obvious and which planned problems were skipped.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="card parent-only">
+    <summary>9. Hidden Parent Summary</summary>
+    <div style="padding-top:12px">
+      <h3>If the equation pathway was secure</h3>
+      <p>Today Shivam moved from simplifying algebraic expressions into solving equations. We focused on understanding equations as balanced statements rather than memorizing a sequence of symbol moves. He practiced inverse operations, two-step equations, equations that need to be simplified first, distribution inside equations, and checking solutions by substitution. The pace was adjusted based on his accuracy and explanations so we could move forward as soon as mastery was clear.</p>
+      <h3>If targeted repair was needed first</h3>
+      <p>Today we began with a short diagnostic check from the previous lesson and identified one specific algebra skill that needed reinforcement before moving forward. We repaired that exact pattern rather than repeating the entire prior lesson, then connected the improved simplification skill to equation solving. The next lesson will be built from the specific evidence collected today.</p>
+    </div>
+  </details>
+
+  <div class="card tutor-only">
+    <h3>Session Management</h3>
+    <p class="small">Uses the same VT Session Engine and Tutor Code format as the existing site.</p>
+    <div class="actions"><button class="btn" type="button" onclick="copyTutorCode()">Copy Tutor Code</button><button class="btn secondary" type="button" onclick="showLoadDialog()">Load Tutor Code</button></div>
+  </div>
+</section>
+
+<p class="footer-note">Shivam's Math Path • Simplify what you can, preserve equality, then solve.</p>
+</main>
+
+<div id="loadDialog" class="code-dialog hidden"><h2>Load Tutor Code</h2><p>Paste the tutor code below.</p><textarea id="codeInput" placeholder="VT-..."></textarea><div class="actions"><button class="btn" onclick="confirmLoadCode()">Load Session</button><button class="btn secondary" onclick="closeLoadDialog()">Cancel</button></div></div>
+<div id="loadDialogOverlay" class="code-dialog-overlay hidden" onclick="closeLoadDialog()"></div>
+
+<script src="vt-session-engine.js"></script>
+<script>
+VTSessionEngine.initialize({loadFromStorage:true});
+function showToast(message){const toast=document.createElement('div');toast.className='toast';toast.textContent=message;document.body.appendChild(toast);setTimeout(()=>toast.remove(),3500)}
+function copyTutorCode(){const code=VTSessionEngine.copyTutorCode();if(!code){showToast('Could not generate tutor code.');return}navigator.clipboard.writeText(code).then(()=>showToast('Tutor Code copied!')).catch(()=>prompt('Copy this Tutor Code:',code))}
+function showLoadDialog(){document.getElementById('loadDialog').classList.remove('hidden');document.getElementById('loadDialogOverlay').classList.remove('hidden');document.getElementById('codeInput').focus()}
+function closeLoadDialog(){document.getElementById('loadDialog').classList.add('hidden');document.getElementById('loadDialogOverlay').classList.add('hidden');document.getElementById('codeInput').value=''}
+function confirmLoadCode(){const code=document.getElementById('codeInput').value.trim();if(!code){showToast('Paste a tutor code first.');return}if(VTSessionEngine.importTutorCode(code)){closeLoadDialog();showToast('Session restored successfully!')}else{showToast('Tutor code could not be loaded.')}}
+</script>
+</body>
+</html>
